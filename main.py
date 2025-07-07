@@ -44,8 +44,8 @@ if submitted:
       app_password = "dsxxuvwybaevopdu"
 
       # Email content
-      subject = f"Pedido de medicação de_{nome}"
-      body = f"Para prescrever por causa de {queixa} para {sns}, {telefone}"
+      # subject = f"Pedido de medicação de_{nome}"
+      # body = f"Para prescrever por causa de {queixa} para {sns}, {telefone}"
 
       # Create the email
       msg = MIMEMultipart()
@@ -53,7 +53,7 @@ if submitted:
       msg["To"] = receiver_email
       msg["Subject"] = subject
 
-      mensagem = f"Para prescrever por causa de {queixa} para {telefone}, submetida em {timestamp}"
+      mensagem =  f"**Para prescrever medicação para a queixa:** {queixa}. SNS: {sns}, Telefone: {telefone}"
       msg.attach(MIMEText(mensagem, 'plain'))
 
       # anexos = [f"./issued/declaracoes/dec_doenca{nome}.docx", f"./issued/declaracoes/dec_doenca{nome}.pdf"]
