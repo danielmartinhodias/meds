@@ -8,12 +8,12 @@ from email.mime.base import MIMEBase
 from email import encoders
 import os
 
-from docx import Document
-from docx.shared import Pt
-from docx.enum.text import WD_ALIGN_PARAGRAPH
+# from docx import Document
+# from docx.shared import Pt
+# from docx.enum.text import WD_ALIGN_PARAGRAPH
 
 
-from docx2pdf import convert
+# from docx2pdf import convert
 
 from datetime import datetime
 
