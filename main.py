@@ -8,13 +8,6 @@ from email.mime.base import MIMEBase
 from email import encoders
 import os
 
-# from docx import Document
-# from docx.shared import Pt
-# from docx.enum.text import WD_ALIGN_PARAGRAPH
-
-
-# from docx2pdf import convert
-
 from datetime import datetime
 
 # Get current timestamp
@@ -34,12 +27,14 @@ with st.form("my_form"):
     queixa = left.text_input("Refira de forma sucinta os seus sintomas ou queixas")
     telefone = right.text_input("Contacto telefónico")
 
+    alergias = st.checkbox("Confirmo, sob compromisso de honra, que não tenho qualquer alergia medicamentosa")
+
     agree = st.checkbox("Confirmo, sob compromisso de honra, ter já previamente informado o médico do motivo de doença e ter sido avaliado pelo mesmo")
     submitted = st.form_submit_button("Submeter pedido")
 
 # After form submission
 if submitted:
-  if not nome or not sns or not queixa or not telefone or not agree:
+  if not nome or not sns or not queixa or not telefone or not agree or not alergias:
     st.error("Pf preencher todos os campos prévios")
   else:
     try:
