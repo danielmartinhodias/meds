@@ -50,7 +50,7 @@ if submitted:
 
       # Email content
       subject = f"Pedido de medicação de_{nome}"
-      body = f"Para prescrever por causa de {queixa} para {telefone}"
+      body = f"Para prescrever por causa de {queixa} para {sns}, {telefone}"
 
       # Create the email
       msg = MIMEMultipart()
