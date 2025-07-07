@@ -29,6 +29,7 @@ with st.form("my_form"):
 
     alergias = st.checkbox("Confirmo, sob compromisso de honra, que não tenho qualquer alergia medicamentosa")
     agree = st.checkbox("Confirmo, sob compromisso de honra, ter já previamente informado o médico do motivo de doença e ter sido avaliado pelo mesmo")
+    
     submitted = st.form_submit_button("Submeter pedido")
 
 # After form submission
@@ -43,7 +44,7 @@ if submitted:
       app_password = "dsxxuvwybaevopdu"
 
       # Email content
-      # subject = f"Pedido de medicação de_{nome}"
+      subject = f"Pedido de medicação de_{nome}"
       # body = f"Para prescrever por causa de {queixa} para {sns}, {telefone}"
 
       # Create the email
