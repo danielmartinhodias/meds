@@ -78,7 +78,7 @@ if submitted:
           smtp.login(sender_email, app_password)
           smtp.send_message(msg)
 
-      print("Email enviado com sucesso para o médico para validação. Aguarde contacto e resposta.")
+      st.success("Email enviado com sucesso para o médico para validação. Aguarde contacto e resposta.")
 
     except:
       pass
