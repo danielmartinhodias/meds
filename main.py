@@ -28,7 +28,6 @@ with st.form("my_form"):
     telefone = right.text_input("Contacto telefónico")
 
     alergias = st.checkbox("Confirmo, sob compromisso de honra, que não tenho qualquer alergia medicamentosa")
-
     agree = st.checkbox("Confirmo, sob compromisso de honra, ter já previamente informado o médico do motivo de doença e ter sido avaliado pelo mesmo")
     submitted = st.form_submit_button("Submeter pedido")
 
@@ -53,7 +52,7 @@ if submitted:
       msg["To"] = receiver_email
       msg["Subject"] = subject
 
-      mensagem =  f"**Para prescrever medicação para a queixa:** {queixa}. SNS: {sns}, Telefone: {telefone}"
+      mensagem =  f"Para prescrever medicação para a queixa: {queixa}. SNS: {sns}, Telefone: {telefone}"
       msg.attach(MIMEText(mensagem, 'plain'))
 
       # anexos = [f"./issued/declaracoes/dec_doenca{nome}.docx", f"./issued/declaracoes/dec_doenca{nome}.pdf"]
